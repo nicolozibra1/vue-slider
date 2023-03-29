@@ -12,7 +12,26 @@
 <body>
 
     <div id="app">
-
+        <div class="wrapper">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="./img/01.webp">
+                </div>
+            </div>
+    
+            <div class="thumbnail">
+                <div class="nail" v-for="(slide, index) in slides" :key="index">
+                    <img :src="slide.image" :alt="slide.title">
+                </div>
+    
+                <div class="next" @click="nextSlide">
+                    <i class="fa-solid fa-circle-arrow-down"></i>
+                </div>
+                <div class="prev" @click="prevSlide">
+                    <i class="fa-solid fa-circle-arrow-up"></i>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
