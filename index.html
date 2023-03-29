@@ -14,7 +14,7 @@
     <div id="app">
         <div class="wrapper">
             <div class="slider">
-                <div class="slide active">
+                <div class="slide active" @mouseover="stopScroll" @mouseleave="startScroll">
                     <img :src="slides[currentIndex].image" :alt="slides[currentIndex].title">
                     <p>{{slides[currentIndex].text}}</p>
                 </div>
