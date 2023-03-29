@@ -1,6 +1,7 @@
 const { createApp } = Vue;
 
 createApp({
+
     data() {
         return {
             slides: [
@@ -35,20 +36,10 @@ createApp({
     },
     methods: {
        nextSlide() {
-        if(this.currentIndex > 4) {
-            this.currentIndex = 0;
-        }
-        else{
-            this.currentIndex++;
-    }
+        this.currentIndex === this.slides.length - 1 ? this.currentIndex = 0 : this.currentIndex++
         },
         prevSlide() {
-            if(this.currentIndex > 4) {
-                this.currentIndex = 0;
-            }
-            else{
-                this.currentIndex--;
-        }
+            this.currentIndex === 0 ? this.currentIndex = this.slides.length - 1 : this.currentIndex--
     }
     }
 }).mount('#app')
