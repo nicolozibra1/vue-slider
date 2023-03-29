@@ -16,6 +16,7 @@
             <div class="slider">
                 <div class="slide active" @mouseover="stopScroll" @mouseleave="startScroll">
                     <img :src="slides[currentIndex].image" :alt="slides[currentIndex].title">
+                    <h2>{{slides[currentIndex].title}}</h2>
                     <p>{{slides[currentIndex].text}}</p>
                 </div>
                 <div class="slide-content">
