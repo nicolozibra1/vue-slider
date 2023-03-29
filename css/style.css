@@ -128,3 +128,12 @@ button i{
 .nail img{
     opacity: 40%;
 }
+
+/* ALERT */
+.alert{
+    position: absolute;
+    bottom: 60px;
+    left: 51%;
+    transform: translate(-50%);
+    width: 30%;
+}
